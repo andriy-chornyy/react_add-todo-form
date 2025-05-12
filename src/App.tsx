@@ -5,7 +5,7 @@ import todosFromServer from './api/todos';
 
 import React, { useState } from 'react';
 import { TodoList } from './components/TodoList';
-import { Todo } from './types';
+import { TodoPlusUser } from './types';
 
 const todoWithUser = todosFromServer.map(todo => ({
   ...todo,
@@ -13,7 +13,7 @@ const todoWithUser = todosFromServer.map(todo => ({
 }));
 
 export const App = () => {
-  const [todos, setTodos] = useState<Todo[]>(todoWithUser);
+  const [todos, setTodos] = useState<TodoPlusUser[]>(todoWithUser);
   const [title, setTitle] = useState('');
   const [userId, setUserId] = useState(0);
 

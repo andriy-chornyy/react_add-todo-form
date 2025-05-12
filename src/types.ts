@@ -1,4 +1,4 @@
-export type Todo = {
+export type TodoPlusUser = {
   id: number;
   title: string;
   completed: boolean;
